@@ -162,9 +162,23 @@ git reset HEAD  [被删文件夹名称]
 git checkout  [ 被删除的文件或文件夹 ]
 ```
 
+Git pull的强制覆盖
+```commandline
+$ git fetch --all
+$ git reset --hard origin/master 
+$ git pull
+```
+
 git 查看远程仓库地址
 ```commandline
 git remote -v
+```
+
+git 添加下载权限
+User Settings 添加Access Tokens
+```commandline
+# user  didi-automl:Mn-eAmCiL6zp8ETmxVhv
+git clone http://didi-automl:Mn-eAmCiL6zp8ETmxVhv@git.xiaojukeji.com/dml/dml-autotabular
 ```
 
 只对github进行代理，对国内的仓库不影响
@@ -283,8 +297,6 @@ RUN  wget https://mirrors.bfsu.edu.cn/anaconda/archive/$ANACONDA_SH -P /home/ \
  docker run -it -p 8888:8888 -v D:/work:/opt/notebooks anaconda3-jupyter /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser"
 
 ```
-
-
 
 镜像：fanshuangxi/automl:flaml-env-0.1.1    
 测试脚本： ${HOME} /automl_flaml_interface /automl_main.py  

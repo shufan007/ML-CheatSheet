@@ -89,6 +89,15 @@ Ray的系统层是以Task为抽象粒度的，用户可以在代码里任意生�
 开源史海钩沉系列 [1] Ray：分布式计算框架
 https://zhuanlan.zhihu.com/p/104022670
 
+Launching Cloud Clusters:
+https://docs.ray.io/en/latest/cluster/cloud.html#cluster-private-setup 
+
+Scaling Applications on Kubernetes with Ray
+https://vishnudeva.medium.com/scaling-applications-on-kubernetes-with-ray-23692eb2e6f0 
+
+A Step-by-Step Guide to Scaling Your First Python Application in the Cloud
+https://medium.com/distributed-computing-with-ray/a-step-by-step-guide-to-scaling-your-first-python-application-in-the-cloud-8761fe331ef1 
+
 
 ### Katib
 
