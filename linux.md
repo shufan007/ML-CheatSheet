@@ -177,8 +177,8 @@ git remote -v
 git 添加下载权限
 User Settings 添加Access Tokens
 ```commandline
-# user  didi-automl:xxx
-git clone http://didi-automl:xxx@git.xiaojukeji.com/dml/dml-autotabular
+# user  automl:xxx
+git clone xxx
 ```
 
 只对github进行代理，对国内的仓库不影响
