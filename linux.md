@@ -177,8 +177,8 @@ git remote -v
 git 添加下载权限
 User Settings 添加Access Tokens
 ```commandline
-# user  didi-automl:Mn-eAmCiL6zp8ETmxVhv
-git clone http://didi-automl:Mn-eAmCiL6zp8ETmxVhv@git.xiaojukeji.com/dml/dml-autotabular
+# user  didi-automl:xxx
+git clone http://didi-automl:xxx@git.xiaojukeji.com/dml/dml-autotabular
 ```
 
 只对github进行代理，对国内的仓库不影响
@@ -311,7 +311,7 @@ python automl_main.py --task_id task_1235 --train_data /home/jovyan/test_data/cr
 ### 环境变量
 ```commandline
 export HADOOP_USER_NAME=prod_alita
-export HADOOP_USER_PASSWORD=JEnvRCY0t7vxys5GE4TEcSNqRHn2VHRN
+export HADOOP_USER_PASSWORD=xxx
 
 export JAVA_HOME=/home/jovyan/workspace/automl_test/bigdata_tools/jdk1.8.0_77
 
@@ -343,7 +343,7 @@ test_data = "hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_dat
 
 ### k8s 提交job
 ```commandline
-kubectl run automl --image=fanshuangxi/automl:latest --env="HADOOP_USER_NAME=prod_alita" --env="HADOOP_USER_PASSWORD=JEnvRCY0t7vxys5GE4TEcSNqRHn2VHRN" -- python /home/submarine/automl_flaml_interface/automl_main.py --task_id test --train_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_1/part-00000-a81f8fff-c57a-42ce-9afc-073cd801e9e6-c000.snappy.parquet --test_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_2/part-00000-55dfe73a-092f-44f2-92b0-e2801b5ad261-c000.snappy.parquet --label_col label --time_budget 240 --task classification --metric roc_auc --estimator_list "['lgbm','xgboost']"  --seed 1
+kubectl run automl --image=fanshuangxi/automl:latest --env="HADOOP_USER_NAME=prod_alita" --env="HADOOP_USER_PASSWORD=xxx" -- python /home/submarine/automl_flaml_interface/automl_main.py --task_id test --train_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_1/part-00000-a81f8fff-c57a-42ce-9afc-073cd801e9e6-c000.snappy.parquet --test_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_2/part-00000-55dfe73a-092f-44f2-92b0-e2801b5ad261-c000.snappy.parquet --label_col label --time_budget 240 --task classification --metric roc_auc --estimator_list "['lgbm','xgboost']"  --seed 1
 ```
 
 --task_id test --train_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_1/part-00000-a81f8fff-c57a-42ce-9afc-073cd801e9e6-c000.snappy.parquet --test_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_2/part-00000-55dfe73a-092f-44f2-92b0-e2801b5ad261-c000.snappy.parquet --label_col label --time_budget 240 --task classification --metric roc_auc --estimator_list "['lgbm','xgboost']"  --seed 1

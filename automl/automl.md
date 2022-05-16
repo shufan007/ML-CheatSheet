@@ -638,7 +638,7 @@ Running Ray programs with Ray Jobs Submission
 
 
 export HADOOP_USER_NAME=prod_alita
-export HADOOP_USER_PASSWORD=JEnvRCY0t7vxys5GE4TEcSNqRHn2VHRN
+export HADOOP_USER_PASSWORD=xxx
 
 ray job submit --runtime-env-json='{"working_dir":"./"}' -- sh ./run.sh --task_id task_123456 --train_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_1/part-00000-a81f8fff-c57a-42ce-9afc-073cd801e9e6-c000.snappy.parquet --test_data hdfs://DClusterNmg2/user/prod_alita/alita_dev/hive/alita_dev/ml_data_split_13434844_59261508_49e97caa66_2/part-00000-55dfe73a-092f-44f2-92b0-e2801b5ad261-c000.snappy.parquet --label_col label --output_path ./test.outputs --time_budget 240 --task classification --metric roc_auc --estimator_list '["lgbm"]' --estimator_kwargs '{"n_jobs":4,"n_concurrent_trials":5}'  --seed 1
  
